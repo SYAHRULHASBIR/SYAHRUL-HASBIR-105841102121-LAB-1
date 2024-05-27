@@ -10,8 +10,7 @@ const ButtonCustom = () => {
       marginBottom: 100,
     }}>
       <ButtonComponent backgroundColor='green' text='Register' />
-      <ButtonComponent backgroundColor='blue' text='selagi' />
-      <ButtonComponent backgroundColor='red' text='baru' />
+      <ButtonComponent backgroundColor='blue' text='sembarang' />
     </View>
   )
 }
@@ -37,6 +36,3 @@ const ButtonComponent = ({ backgroundColor, text }) => {
       </View>
     )
   }
-
-
-export default ButtonCustom;
