@@ -1,0 +1,103 @@
+import React from 'react';
+import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet } from 'react-native';
+
+const SignupScreen = () => {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Sign Up</Text>
+      
+      <TextInput 
+        style={styles.input} 
+        placeholder="Email" 
+      />
+      <TextInput 
+        style={styles.input} 
+        placeholder="Password" 
+        secureTextEntry={true}
+      />
+      <TextInput 
+        style={styles.input} 
+        placeholder="Confirm Password" 
+        secureTextEntry={true}
+      />
+      
+      <TouchableOpacity style={styles.signupButton}>
+        <Text style={styles.signupButtonText}>SIGN UP</Text>
+      </TouchableOpacity>
+      
+      <Text style={styles.orText}>Or sign up with social account</Text>
+      
+      <View style={styles.socialButtonsContainer}>
+        <TouchableOpacity style={styles.socialButton}>
+          <Image 
+            source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/G_font.svg'}}
+            style={styles.socialButtonIcon}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.socialButton}>
+          <Image 
+            source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg'}}
+            style={styles.socialButtonIcon}
+          />
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    padding: 20,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+  },
+  title: {
+    fontSize: 30,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  input: {
+    height: 50,
+    borderColor: '#ddd',
+    borderWidth: 1,
+    borderRadius: 5,
+    paddingHorizontal: 10,
+    marginBottom: 15,
+  },
+  signupButton: {
+    backgroundColor: 'red',
+    borderRadius: 5,
+    paddingVertical: 15,
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  signupButtonText: {
+    color: '#fff',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  orText: {
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  socialButtonsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+  },
+  socialButton: {
+    width: 50,
+    height: 50,
+    borderRadius: 25,
+    backgroundColor: '#eee',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginHorizontal: 10,
+  },
+  socialButtonIcon: {
+    width: 30,
+    height: 30,
+  },
+});
+
+export default SignupScreen;
