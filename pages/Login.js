@@ -28,13 +28,13 @@ const LoginScreen = () => {
       <View style={styles.socialButtonsContainer}>
         <TouchableOpacity style={styles.socialButton}>
           <Image 
-            source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/4/4f/G_font.svg'}}
+            source={require('../assets/google.png')}
             style={styles.socialButtonIcon}
           />
         </TouchableOpacity>
         <TouchableOpacity style={styles.socialButton}>
           <Image 
-            source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg'}}
+            source={require('../assets/facebook.png')}
             style={styles.socialButtonIcon}
           />
         </TouchableOpacity>
