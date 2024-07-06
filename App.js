@@ -1,13 +1,26 @@
-import ForgotPasswordScreen from "./pages/Forgot"; 
-import SignupScreen from "./pages/Singup";
-import LoginScreen from "./pages/Login";
 
-export default function App() {
+
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import SignUp from './pages/SignUp.js';
+import Login from './pages/Login.js';
+import ForgotPassword from './pages/ForgotPassword.js';
+
+
+const Stack = createNativeStackNavigator();
+
+function App() {
   return (
-    <>
-      {/* <LoginScreen />*/ }
-      {/* <SignupScreen /> */}
-      {<ForgotPasswordScreen></ForgotPasswordScreen>}
-    </> 
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="SingUp" component={SignUp} />
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
+
+export default App;

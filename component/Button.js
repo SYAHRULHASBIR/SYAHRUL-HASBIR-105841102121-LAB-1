@@ -1,38 +1,32 @@
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
-const ButtonCustom = () => {
-  return (
-    <View style={{
-      flex: 1,
-      backgroundColor: 'white',
-      justifyContent: 'center', //kolom
-      alignItems: 'flex-end', //baris
-      flexDirection: 'row',
-      marginBottom: 100,
-    }}>
-      <ButtonComponent backgroundColor='green' text='Register' />
-      <ButtonComponent backgroundColor='blue' text='sembarang' />
-    </View>
-  )
-}
+import React from 'react';
+import { View, Text } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-const ButtonComponent = ({ backgroundColor, text }) => {
+
+const ButtonComponent = ({backgroundColor, text}) => {
     return (
-      <View style={{
-        backgroundColor: backgroundColor,
-        width: 150,
-        height: 70,
-        borderRadius: 10,
-        marginLeft: 10
-      }}>
-        <Text style={{
-          color: 'white',
-          textAlign: 'center',
-          lineHeight: 70,
-          fontSize: 25,
-          fontWeight: 'bold',
+        <SafeAreaView>
+        <View style={{
+            backgroundColor: backgroundColor,
+            borderRadius: 25,
+            width: 343,
+            height: 48,
+            justifyContent: 'center',
+            alignItems: 'center',
+            marginLeft: 20,
+            marginBottom: 100
         }}>
-          {text}
+  
+        <Text style={{
+            color: 'white',
+            fontSize: 14,
+            lineHeight: 20
+        }}>
+            {text}
         </Text>
-      </View>
+    </View>
+    </SafeAreaView>
     )
   }
+  
+export default ButtonComponent;
