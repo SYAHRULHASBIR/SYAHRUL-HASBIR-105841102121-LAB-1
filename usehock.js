@@ -1,19 +1,11 @@
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native'
+import { StyleSheet, Text, View, TextInput } from 'react-native'
 import React, { useState } from 'react'
+import { Button } from 'react-native-web'
 const App = () => {
   const [formLogin, setForm] = useState({
-    username: '',
     email: '',
     password: ''
   })
-  const onSubmit = () => {
-    if (formLogin.email === 'unismuh'
-      && formLogin.password === 'unismuh') {
-      alert('Login Berhasil')
-    } else {
-      alert('Login Gagal')
-    }
-  }
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <Text>Form Login</Text>
@@ -31,7 +23,7 @@ const App = () => {
           value={formLogin.password}
         />
         <View style={{ marginTop: 10 }}>
-          <Button title="Login" onPress={onSubmit} />
+          <Button title="Login" onPress={() => alert('Login')} />
         </View>
         <View>
           <Text>Email: {formLogin.email}</Text>
